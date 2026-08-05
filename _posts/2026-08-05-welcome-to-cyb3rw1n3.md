@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Welcome to CYB3RW1N3"
-description: "My journal towards being a researcher"
+description: "My journal towards becoming a researcher and contributing to the community"
 category: "Lab Notes"
 date: 2026-08-05 20:00:00 +0530
 read_time: 3
