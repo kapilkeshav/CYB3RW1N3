@@ -1,0 +1,13 @@
+title: CYB3RW1N3
+description: Cybersecurity research, detection engineering, and technical write-ups.
+url: ""
+baseurl: "/CYB3RW1N3"
+github_username: kapilkeshav
+
+markdown: kramdown
+permalink: /research/:title/
+timezone: Asia/Kolkata
+
+exclude:
+  - README.md
+  - post-template.md

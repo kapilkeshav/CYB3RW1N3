@@ -1,0 +1,57 @@
+---
+layout: default
+title:
+---
+
+<main>
+  <section class="hero">
+    <p class="eyebrow">CYBERSECURITY RESEARCH JOURNAL</p>
+    <h1>Notes from the edge of detection and defense.</h1>
+    <p class="hero-copy">
+      Technical research, detection engineering, threat analysis, and
+      experiments documented as I learn and build.
+    </p>
+  </section>
+
+  <section id="research" class="research-section">
+    <div class="section-heading">
+      <p>SELECTED WRITING</p>
+      <span>Latest research and field notes</span>
+    </div>
+
+    <div class="card-grid">
+      {% for post in site.posts %}
+        <article class="research-card">
+          <div class="card-topline">
+            <span>{{ post.category | upcase }}</span>
+            <time datetime="{{ post.date | date_to_xmlschema }}">
+              {{ post.date | date: "%d %b %Y" | upcase }}
+            </time>
+          </div>
+
+          <h2>{{ post.title }}</h2>
+          <p>{{ post.description }}</p>
+
+          <a href="{{ post.url | relative_url }}" aria-label="Read {{ post.title }}">
+            Read research <span>↗</span>
+          </a>
+        </article>
+      {% endfor %}
+    </div>
+
+    {% if site.posts.size == 0 %}
+      <p class="empty-state">
+        No research published yet. Add a Markdown file inside <code>_posts</code>.
+      </p>
+    {% endif %}
+  </section>
+
+  <section id="about" class="about-section">
+    <p class="eyebrow">ABOUT</p>
+    <p>
+      I document cybersecurity research, detection ideas, technical
+      experiments, and lessons from the field. This site is intentionally
+      minimal so the work stays at the center.
+    </p>
+  </section>
+</main>
